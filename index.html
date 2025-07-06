@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="shortcut icon" href="imgs/cloudy.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-logo" href="#home"
+          ><img src="imgs/meteorology.png" class="w-100" alt="weather icon"
+        /></a>
+        <a href="#home" class="me-auto ms-1"
+          ><span class="text-white">Weather App</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item mx-3">
+              <a
+                class="nav-link active hover-underline"
+                aria-current="page"
+                href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link hover-underline" href="#new">News</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link hover-underline" href="#live cameras"
+                >Live Cameras</a
+              >
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link hover-underline" href="#photos">Photos</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link hover-underline" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ================================================================================================ -->
+    <search class="mb-5 search-city">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <form action="" class="city-form mt-5 position-relative">
+              <input
+                type="text"
+                placeholder="Find your location..."
+                class="city-input w-75 d-block mx-auto p-3 border-1 rounded-pill"
+              />
+              <button s class="search-btn border-1 rounded-pill" type="button">
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+
+                Find
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </search>
+    <!-- ================================================================================================ -->
+    <main class="container weather-info">
+      <div class="row position-relative">
+        <div class="today-card col-md-3">
+          <div
+            class="card-title d-flex justify-content-between align-items-center"
+          >
+            <h2 class="current-day"></h2>
+            <span class="current-date"></span>
+          </div>
+
+          <div class="card-body">
+            <span class="city-name"></span>
+            <h3 class="current-temp"></h3>
+            <div class="weather-details">
+              <span class="today-icon"></span>
+              <span class="today-description"></span>
+              <span class="today-humidity"></span>
+              <span class="today-wind"></span>
+            </div>
+          </div>
+        </div>
+        <div class="tomorrow-card col-md-3">
+          <div
+            class="card-title d-flex justify-content-between align-items-center"
+          >
+            <h2 class="next-day"></h2>
+            <span class="tomorrow-date"></span>
+          </div>
+
+          <div class="card-body">
+            <h3 class="tomorrow-temp"></h3>
+            <div class="weather-details">
+              <span class="tomorrow-icon"></span>
+              <span class="tomorrow-description"></span>
+              <span class="tomorrow-humidity"></span>
+              <span class="tomorrow-wind"></span>
+            </div>
+          </div>
+        </div>
+        <div class="after-tomorrow-card col-md-3">
+          <div
+            class="card-title d-flex justify-content-between align-items-center"
+          >
+            <h2 class="after-next-day"></h2>
+            <span class="after-tomorrow-date"></span>
+          </div>
+
+          <div class="card-body">
+            <h3 class="after-tomorrow-temp"></h3>
+            <div class="weather-details">
+              <span class="after-tomorrow-icon"></span>
+              <span class="after-tomorrow-description"></span>
+              <span class="after-tomorrow-humidity"></span>
+              <span class="after-tomorrow-wind"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- ================================================================================================ -->
+    <footer class="z-3 position-fixed bottom-0 w-100">
+      <div class="container">
+        <div
+          class="row text-center d-flex justify-content-between align-items-center"
+        >
+          <div class="col-md-8 mb-5">
+            <form action="" class="position-relative">
+              <input
+                type="email"
+                placeholder="Enter your email to subscribe..."
+                class="subscribe-input w-100 mt-5 d-block mx-auto p-3 border-1 rounded-pill"
+              />
+
+              <button
+                class="subscribe-btn border-1 rounded-pill px-3 py-2"
+                type="button"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <div class="social-links col-md-4 d-flex justify-content-center">
+            <a href="https://www.facebook.com/" class="facebook me-2">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/?lang=en" class="twitter me-2">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.google.com/" class="google me-2">
+              <i class="fa-brands fa-google"></i>
+            </a>
+            <a href="https://www.pinterest.com/" class="pinterest me-2">
+              <i class="fa-brands fa-pinterest-p"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-secondary">
+        © 2025 Mahmoud Yehia. All rights reserved.
+      </p>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

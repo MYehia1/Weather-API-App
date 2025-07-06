@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-image: url(../imgs/new-york.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100dvh;
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+}
+/* Navbar */
+.container .navbar-logo {
+  width: 50px;
+}
+.bg-body-tertiary {
+  background-color: transparent !important;
+}
+.nav-link:focus,
+.nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: rgba(255, 255, 255, 1);
+}
+.hover-underline {
+  font-size: 1rem;
+  color: lightgray;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #ff0000, #00ffff);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
+/* ======================================= */
+/* Main Content */
+.city-input {
+  position: relative;
+  /* border: 1px solid transparent; */
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0 4px 20px rgba(0, 145, 255, 1);
+  border: 1px solid #009fe3;
+}
+input::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+.search-btn {
+  width: 80px;
+  height: 40px;
+  position: absolute;
+  right: 10.9375rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #009fe3;
+  color: #fff;
+  border: 1px solid transparent;
+  outline: none;
+}
+.today-card,
+.tomorrow-card,
+.after-tomorrow-card {
+  border-radius: 5px;
+  padding: 20px;
+  margin-inline: auto;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.current-temp,
+.tomorrow-temp,
+.after-tomorrow-temp {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+/* ====================================================== */
+
+/* Footer */
+footer {
+  background-color: #21222c;
+}
+.subscribe-input {
+  position: relative;
+  border: 1px solid transparent;
+  outline: none;
+}
+.subscribe-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #009fe3;
+  color: #fff;
+  border: 1px solid transparent;
+  outline: none;
+}
+footer .social-links {
+  width: fit-content;
+}
+footer .social-links a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+footer .social-links a:hover {
+  color: #fff;
+}
+footer .social-links a.facebook:hover {
+  background-color: #1877f2;
+}
+footer .social-links a.twitter:hover {
+  background-color: #1da1f2;
+}
+footer .social-links a.google:hover {
+  background-color: #db4437;
+}
+footer .social-links a.pinterest:hover {
+  background-color: #e60023;
+}
